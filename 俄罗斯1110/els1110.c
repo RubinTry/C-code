@@ -9,12 +9,12 @@ int main()
 	for (x=0; x<m; x++){
 		i=x;
 		for (j=2; j<=n; j++){
-			i*=x;
-			i=i%m;
+			i*=x;//计算i的j次方 
+			i=i%m;//取余 
 		}
 		if (i==y){
-				k=1;
-				printf("%d ",x);
+		    k=1;
+	        printf("%d ",x);
 		}
 	}
 	if(k==0)
