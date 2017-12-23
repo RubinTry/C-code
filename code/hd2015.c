@@ -1,0 +1,41 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+int main()
+{
+	int i,n,m,b[1000],sum,a[200],t,j;
+	a[0]=2;
+	for(i=1;i<200;i++)
+	{
+		a[i]=a[i-1]+2;
+	}
+	
+	while(scanf("%d%d",&n,&m)!=EOF)
+	{
+		sum=0;
+		if(n<=m)
+		{
+			for(i=0;i<n;i++)
+			{
+				sum+=a[i];
+			}
+			printf("%d\n",sum/n);
+		}
+		else{
+			t=0;
+			j=0;
+			for(i=t;i<m;i++)
+			{
+				sum+=a[i];
+				if(i==m-1)
+				{
+					b[j]=sum;
+					printf("%d",b[j]);
+					j++;
+					t+=m;
+					m+=m;
+				}
+			}
+		}
+	}
+}
